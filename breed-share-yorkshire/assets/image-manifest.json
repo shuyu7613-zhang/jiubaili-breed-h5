@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "约克夏梗犬-品种识别卡.png",
+    "bytes": 161702
+  },
+  {
+    "target": "health.jpg",
+    "source": "约克夏-健康观察.png",
+    "bytes": 162644
+  },
+  {
+    "target": "disease.jpg",
+    "source": "约克夏-疾病关注.png",
+    "bytes": 169467
+  },
+  {
+    "target": "diet.jpg",
+    "source": "约克夏-饮食注意.png",
+    "bytes": 158608
+  },
+  {
+    "target": "care.jpg",
+    "source": "约克夏-保健重点.png",
+    "bytes": 144623
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "约克夏-情绪关注.png",
+    "bytes": 156840
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "约克夏-保险建议.png",
+    "bytes": 156953
+  }
+]

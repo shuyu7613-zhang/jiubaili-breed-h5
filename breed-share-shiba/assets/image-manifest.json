@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "柴犬-品种识别卡.png",
+    "bytes": 147335
+  },
+  {
+    "target": "health.jpg",
+    "source": "柴犬-健康观察.png",
+    "bytes": 128251
+  },
+  {
+    "target": "disease.jpg",
+    "source": "柴犬-疾病关注.png",
+    "bytes": 144219
+  },
+  {
+    "target": "diet.jpg",
+    "source": "柴犬-饮食注意.png",
+    "bytes": 160514
+  },
+  {
+    "target": "care.jpg",
+    "source": "柴犬-保健重点.png",
+    "bytes": 139169
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "柴犬-情绪关注.png",
+    "bytes": 153717
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "柴犬-保险建议.png",
+    "bytes": 145851
+  }
+]

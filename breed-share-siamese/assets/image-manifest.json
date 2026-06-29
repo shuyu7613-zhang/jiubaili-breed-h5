@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "暹罗猫-品种识别卡.png",
+    "bytes": 150344
+  },
+  {
+    "target": "health.jpg",
+    "source": "暹罗-健康观察.png",
+    "bytes": 139175
+  },
+  {
+    "target": "disease.jpg",
+    "source": "暹罗-疾病关注.png",
+    "bytes": 141893
+  },
+  {
+    "target": "diet.jpg",
+    "source": "暹罗-饮食注意.png",
+    "bytes": 150068
+  },
+  {
+    "target": "care.jpg",
+    "source": "暹罗-保健重点.png",
+    "bytes": 134602
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "暹罗-情绪关注.png",
+    "bytes": 158833
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "暹罗-保险建议.png",
+    "bytes": 133114
+  }
+]

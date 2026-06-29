@@ -1,0 +1,221 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>宠物品种知识图谱</title>
+  <style>
+    :root { --ink:#17332b; --muted:#687972; --green:#167a62; --deep:#0f4639; --mint:#eef8f3; --line:rgba(22,122,98,.14); --warm:#fff8ec; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:radial-gradient(circle at 12% 4%,rgba(167,224,194,.30),transparent 28%),radial-gradient(circle at 88% 18%,rgba(255,232,185,.34),transparent 24%),linear-gradient(180deg,#fbfefc 0%,#f7fcf9 36%,#ffffff 72%,#f4faf7 100%); letter-spacing:0; }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; width:100%; }
+    .page { max-width:980px; margin:0 auto; padding:22px 16px 48px; background:linear-gradient(180deg,rgba(237,248,243,.58) 0%,rgba(255,255,255,.18) 300px,rgba(255,255,255,0) 520px); }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+    .brand-wrap { display:flex; align-items:center; gap:8px; }
+    .brand { display:inline-flex; align-items:center; gap:8px; color:var(--green); font-size:13px; font-weight:900; }
+    .brand-mark { width:26px; height:26px; border-radius:9px; display:grid; place-items:center; color:#fff; background:var(--green); }
+    .pill { border:1px solid var(--line); border-radius:999px; padding:7px 11px; color:var(--muted); background:rgba(255,255,255,.76); font-size:12px; font-weight:800; }
+    .hero { display:grid; gap:18px; align-items:end; padding:6px 0 14px; }
+    h1 { margin:8px 0 4px; font-size:38px; line-height:1.08; letter-spacing:0; }
+    .tabs { position:sticky; top:0; z-index:10; display:flex; gap:10px; padding:10px 0 14px; background:linear-gradient(180deg,rgba(248,253,249,.92) 0%,rgba(248,253,249,.72) 68%,rgba(248,253,249,0)); backdrop-filter:blur(8px); }
+    .tab { flex:1; border:1px solid rgba(22,122,98,.16); border-radius:999px; padding:11px 12px; color:var(--green); background:rgba(255,255,255,.78); text-align:center; font-size:14px; font-weight:900; box-shadow:0 8px 18px rgba(16,70,56,.05); }
+    .section-title { display:flex; align-items:end; justify-content:space-between; gap:10px; margin:20px 2px 12px; }
+    .section-title h2 { margin:0; font-size:23px; letter-spacing:0; }
+    .section-title span { color:var(--green); font-size:12px; font-weight:900; white-space:nowrap; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .breed-card { overflow:hidden; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:0 10px 24px rgba(16,70,56,.08); }
+    .breed-card img { aspect-ratio:4/3; object-fit:cover; background:var(--mint); }
+    .breed-info { display:grid; gap:7px; padding:11px; }
+    .breed-row { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+    .breed-row h3 { margin:0; font-size:17px; letter-spacing:0; }
+    .breed-row span { border-radius:999px; padding:4px 7px; color:var(--green); background:var(--mint); font-size:11px; font-weight:900; white-space:nowrap; }
+    .breed-info p { margin:0; color:var(--muted); font-size:12px; line-height:1.45; }
+    .mini-tags { display:flex; flex-wrap:wrap; gap:5px; }
+    .mini-tags em { border-radius:999px; padding:4px 6px; color:#6a776f; background:#f6faf8; font-style:normal; font-size:10px; line-height:1; }
+    .is-muted { opacity:.82; }
+    .note { margin-top:18px; border:1px solid rgba(238,145,70,.22); border-radius:18px; padding:14px; color:#72583a; background:var(--warm); font-size:13px; line-height:1.65; }
+    @media (min-width:760px) { .page{padding:34px 28px 60px;} .hero{padding:10px 0 18px;} h1{font-size:54px;} .grid{grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px;} .breed-info{padding:13px;} }
+  
+    .share-btn { display:inline-grid; place-items:center; width:34px; height:34px; border:1px solid rgba(22,122,98,.14); border-radius:999px; color:var(--green); background:rgba(255,255,255,.88); box-shadow:0 8px 20px rgba(18,75,58,.08); cursor:pointer; pointer-events:auto; }
+    .share-btn svg { width:18px; height:18px; stroke:currentColor; stroke-width:2.2; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .share-mask { position:fixed; inset:0; z-index:80; display:none; align-items:flex-end; justify-content:center; background:rgba(9,31,25,.34); padding:16px; }
+    .share-mask.is-open { display:flex; }
+    .share-panel { width:min(430px,100%); border-radius:24px; padding:16px; background:#fff; box-shadow:0 20px 50px rgba(6,35,27,.22); }
+    .share-panel h2 { margin:0 0 5px; font-size:19px; line-height:1.25; letter-spacing:0; color:var(--ink); }
+    .share-panel p { margin:0 0 14px; color:var(--muted); font-size:13px; line-height:1.55; }
+    .share-actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .share-action { border:0; border-radius:16px; padding:13px 10px; color:var(--green); background:var(--mint); font-size:14px; font-weight:900; font-family:inherit; cursor:pointer; }
+    .share-action.primary { color:#fff; background:var(--green); }
+    .share-copy-btn { grid-column:1 / -1; color:var(--deep); background:#f5fbf8; }
+    .share-close { width:100%; margin-top:10px; border:0; border-radius:16px; padding:12px; color:var(--muted); background:#f4f6f5; font-size:14px; font-weight:800; font-family:inherit; cursor:pointer; }
+    .toast { position:fixed; left:50%; bottom:112px; z-index:90; transform:translateX(-50%); display:none; max-width:calc(100% - 40px); border-radius:999px; padding:10px 14px; color:#fff; background:rgba(15,70,57,.92); font-size:13px; line-height:1.35; }
+    .toast.is-show { display:block; }
+
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar"><div class="brand-wrap"><div class="brand"><span class="brand-mark">宠</span><span>宠物数字身份健康卡</span></div><button class="share-btn" type="button" data-open-share aria-label="??"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 16V4"/><path d="M7.5 8.5 12 4l4.5 4.5"/></svg></button></div><span class="pill">品种知识图谱</span></header>
+    <section class="hero compact-hero">
+      <div><h1>宠物品种<br>知识图谱</h1></div>
+    </section>
+    <nav class="tabs" aria-label="品种分类"><a class="tab" href="#cats">猫咪品种</a><a class="tab" href="#dogs">狗狗品种</a></nav>
+    <section id="cats"><div class="section-title"><h2>猫咪品种</h2><span>猫咪图谱已开放</span></div><div class="grid"><a class="breed-card " href="breed-share-persian/index.html"  data-species="猫咪">
+    <img src="assets/persian.jpg" alt="波斯猫知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>波斯猫</h3><span>查看图谱</span></div>
+      <p>长毛猫 · 面部护理 · 安静亲人</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-buou/index.html"  data-species="猫咪">
+    <img src="assets/ragdoll.jpg" alt="布偶猫知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>布偶猫</h3><span>查看图谱</span></div>
+      <p>大型猫 · 蓝眼长毛 · 温顺粘人</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-lihua/index.html"  data-species="猫咪">
+    <img src="assets/lihua-cat.jpg" alt="狸花猫知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>狸花猫</h3><span>查看图谱</span></div>
+      <p>本土猫 · 适应力强 · 活泼警觉</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-american-shorthair/index.html"  data-species="猫咪">
+    <img src="assets/american-shorthair.jpg" alt="美短猫知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>美短猫</h3><span>查看图谱</span></div>
+      <p>短毛猫 · 运动管理 · 亲人好奇</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-maine-coon/index.html"  data-species="猫咪">
+    <img src="assets/maine-coon.jpg" alt="缅因猫知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>缅因猫</h3><span>查看图谱</span></div>
+      <p>大型猫 · 毛发护理 · 温和稳重</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-siamese/index.html"  data-species="猫咪">
+    <img src="assets/siamese.jpg" alt="暹罗猫知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>暹罗猫</h3><span>查看图谱</span></div>
+      <p>短毛猫 · 高互动 · 声音表达明显</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a></div></section>
+    <section id="dogs"><div class="section-title"><h2>狗狗品种</h2><span>狗狗图谱已开放</span></div><div class="grid"><a class="breed-card " href="breed-share-border-collie/index.html"  data-species="狗狗">
+    <img src="assets/border-collie.jpg" alt="边牧犬知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>边牧犬</h3><span>查看图谱</span></div>
+      <p>中型犬 · 高运动量 · 聪明敏捷</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-pomeranian/index.html"  data-species="狗狗">
+    <img src="assets/pomeranian.jpg" alt="博美犬知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>博美犬</h3><span>查看图谱</span></div>
+      <p>小型犬 · 毛量丰富 · 警觉活泼</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-shiba/index.html"  data-species="狗狗">
+    <img src="assets/shiba.jpg" alt="柴犬知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>柴犬</h3><span>查看图谱</span></div>
+      <p>中小型犬 · 皮肤肠胃 · 独立警觉</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-german-shepherd/index.html"  data-species="狗狗">
+    <img src="assets/german-shepherd.jpg" alt="德牧犬知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>德牧犬</h3><span>查看图谱</span></div>
+      <p>大型犬 · 运动训练 · 服从性强</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-chihuahua/index.html"  data-species="狗狗">
+    <img src="assets/chihuahua.jpg" alt="吉娃娃知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>吉娃娃</h3><span>查看图谱</span></div>
+      <p>小型犬 · 保暖重点 · 敏感黏人</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-corgi/index.html"  data-species="狗狗">
+    <img src="assets/corgi.jpg" alt="柯基犬知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>柯基犬</h3><span>查看图谱</span></div>
+      <p>小短腿 · 腰背关注 · 活泼亲人</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-labrador/index.html"  data-species="狗狗">
+    <img src="assets/labrador.jpg" alt="拉布拉多知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>拉布拉多</h3><span>查看图谱</span></div>
+      <p>中大型犬 · 体重管理 · 亲人贪吃</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-poodle/index.html"  data-species="狗狗">
+    <img src="assets/poodle.jpg" alt="泰迪犬知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>泰迪犬</h3><span>查看图谱</span></div>
+      <p>小型犬 · 口腔毛发 · 聪明黏人</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-mini-pinscher/index.html"  data-species="狗狗">
+    <img src="assets/mini-pinscher.jpg" alt="小鹿犬知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>小鹿犬</h3><span>查看图谱</span></div>
+      <p>小型犬 · 运动灵活 · 精力旺盛</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-schnauzer/index.html"  data-species="狗狗">
+    <img src="assets/schnauzer.jpg" alt="雪纳瑞知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>雪纳瑞</h3><span>查看图谱</span></div>
+      <p>小型犬 · 皮肤泌尿 · 警觉亲人</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a>
+<a class="breed-card " href="breed-share-yorkshire/index.html"  data-species="狗狗">
+    <img src="assets/yorkshire.jpg" alt="约克夏知识图谱封面">
+    <div class="breed-info">
+      <div class="breed-row"><h3>约克夏</h3><span>查看图谱</span></div>
+      <p>小型犬 · 牙齿护理 · 精致活泼</p>
+      <div class="mini-tags"><em>品种识别</em><em>健康观察</em><em>饮食护理</em><em>情绪信号</em></div>
+    </div>
+  </a></div></section>
+    <div class="note">点击任一品种卡片，可查看对应的 7 张知识图谱。</div>
+  </main>
+<div class="share-mask" id="shareMask" aria-hidden="true"><div class="share-panel" role="dialog" aria-modal="true" aria-labelledby="shareTitle"><h2 id="shareTitle">分享这张知识图谱</h2><p>可以转发给微信好友，也可以复制链接后发到朋友圈。</p><div class="share-actions"><button class="share-action primary" type="button" data-share="friend">分享给好友</button><button class="share-action" type="button" data-share="timeline">分享到朋友圈</button><button class="share-action share-copy-btn" type="button" data-share="copy">复制页面链接</button></div><button class="share-close" type="button" data-share="close">取消</button></div></div><div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+  var mask = document.getElementById('shareMask');
+  var toast = document.getElementById('toast');
+  var btn = document.querySelector('[data-open-share]');
+  var title = document.title || '宠物品种知识图谱';
+  var text = '这份宠物品种知识图谱可以收藏备用，日常观察和就医沟通都能用上。';
+  var url = location.href;
+  function showToast(msg){ if(!toast) return; toast.textContent = msg; toast.classList.add('is-show'); setTimeout(function(){ toast.classList.remove('is-show'); }, 2200); }
+  function open(){ if(mask){ mask.classList.add('is-open'); mask.setAttribute('aria-hidden','false'); } }
+  function close(){ if(mask){ mask.classList.remove('is-open'); mask.setAttribute('aria-hidden','true'); } }
+  async function copyLink(){ try { await navigator.clipboard.writeText(url); showToast('链接已复制，可以粘贴给好友或朋友圈'); } catch(e){ showToast('请手动复制浏览器地址栏链接'); } }
+  async function share(kind){ if (navigator.share && kind === 'friend') { try { await navigator.share({ title:title, text:text, url:url }); close(); return; } catch(e) {} } await copyLink(); if (kind === 'timeline') showToast('朋友圈分享需在微信内使用右上角分享，链接已复制'); }
+  if(btn) btn.addEventListener('click', open);
+  if(mask) mask.addEventListener('click', function(e){ if(e.target === mask || e.target.dataset.share === 'close') close(); if(e.target.dataset.share === 'friend') share('friend'); if(e.target.dataset.share === 'timeline') share('timeline'); if(e.target.dataset.share === 'copy') copyLink(); });
+})();
+</script>
+</body>
+</html>

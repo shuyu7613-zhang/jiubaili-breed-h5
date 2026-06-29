@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "雪纳瑞犬-品种识别卡.png",
+    "bytes": 190471
+  },
+  {
+    "target": "health.jpg",
+    "source": "雪纳瑞-健康观察.png",
+    "bytes": 185443
+  },
+  {
+    "target": "disease.jpg",
+    "source": "雪纳瑞-疾病关注.png",
+    "bytes": 184393
+  },
+  {
+    "target": "diet.jpg",
+    "source": "雪纳瑞-饮食注意.png",
+    "bytes": 200364
+  },
+  {
+    "target": "care.jpg",
+    "source": "雪纳瑞-保健重点.png",
+    "bytes": 167435
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "雪纳瑞-情绪关注.png",
+    "bytes": 190576
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "雪纳瑞-保险建议.png",
+    "bytes": 185522
+  }
+]
