@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "小鹿犬-迷你杜宾-品牌识别卡.png",
+    "bytes": 147615
+  },
+  {
+    "target": "health.jpg",
+    "source": "小鹿犬-健康观察.png",
+    "bytes": 161915
+  },
+  {
+    "target": "disease.jpg",
+    "source": "小鹿犬-疾病关注.png",
+    "bytes": 157994
+  },
+  {
+    "target": "diet.jpg",
+    "source": "小鹿犬-饮食注意.png",
+    "bytes": 178132
+  },
+  {
+    "target": "care.jpg",
+    "source": "小鹿犬-保健重点.png",
+    "bytes": 141525
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "小鹿犬-情绪关注.png",
+    "bytes": 137938
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "小鹿犬-保险建议.png",
+    "bytes": 149386
+  }
+]

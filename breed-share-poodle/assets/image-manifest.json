@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "泰迪犬-品牌识别卡.png",
+    "bytes": 167410
+  },
+  {
+    "target": "health.jpg",
+    "source": "泰迪-健康观察.png",
+    "bytes": 146974
+  },
+  {
+    "target": "disease.jpg",
+    "source": "泰迪-疾病关注.png",
+    "bytes": 161242
+  },
+  {
+    "target": "diet.jpg",
+    "source": "泰迪-饮食注意.png",
+    "bytes": 176055
+  },
+  {
+    "target": "care.jpg",
+    "source": "泰迪-保健重点.png",
+    "bytes": 163146
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "泰迪-情绪关注.png",
+    "bytes": 166542
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "泰迪-保险建议.png",
+    "bytes": 138534
+  }
+]

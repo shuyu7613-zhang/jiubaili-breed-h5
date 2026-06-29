@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "中国狸花猫-品种识别卡.png",
+    "bytes": 165767
+  },
+  {
+    "target": "health.jpg",
+    "source": "狸花猫-健康观察.png",
+    "bytes": 164506
+  },
+  {
+    "target": "disease.jpg",
+    "source": "狸花猫-疾病关注.png",
+    "bytes": 170129
+  },
+  {
+    "target": "diet.jpg",
+    "source": "狸花猫-饮食注意.png",
+    "bytes": 166486
+  },
+  {
+    "target": "care.jpg",
+    "source": "狸花猫-保健重点.png",
+    "bytes": 157479
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "狸花猫-情绪关注.png",
+    "bytes": 169084
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "狸花猫-保险建议.png",
+    "bytes": 166288
+  }
+]

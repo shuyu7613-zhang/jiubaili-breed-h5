@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "拉布拉多-品种识别卡.png",
+    "bytes": 147241
+  },
+  {
+    "target": "health.jpg",
+    "source": "拉布拉多-健康观察.png",
+    "bytes": 133980
+  },
+  {
+    "target": "disease.jpg",
+    "source": "拉布拉多-疾病关注.png",
+    "bytes": 149690
+  },
+  {
+    "target": "diet.jpg",
+    "source": "拉布拉多-饮食注意.png",
+    "bytes": 150850
+  },
+  {
+    "target": "care.jpg",
+    "source": "拉布拉多-保健重点.png",
+    "bytes": 135954
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "拉布拉多-情绪关注.png",
+    "bytes": 143702
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "拉布拉多-保险建议.png",
+    "bytes": 151937
+  }
+]

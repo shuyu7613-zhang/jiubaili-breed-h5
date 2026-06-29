@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "缅因猫-品种识别卡.png",
+    "bytes": 180140
+  },
+  {
+    "target": "health.jpg",
+    "source": "缅因-健康观察.png",
+    "bytes": 154325
+  },
+  {
+    "target": "disease.jpg",
+    "source": "缅因-疾病关注.png",
+    "bytes": 193367
+  },
+  {
+    "target": "diet.jpg",
+    "source": "缅因-饮食注意.png",
+    "bytes": 182428
+  },
+  {
+    "target": "care.jpg",
+    "source": "缅因-保健重点.png",
+    "bytes": 153462
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "缅因-情绪关注.png",
+    "bytes": 165206
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "缅因-保险建议.png",
+    "bytes": 160545
+  }
+]
