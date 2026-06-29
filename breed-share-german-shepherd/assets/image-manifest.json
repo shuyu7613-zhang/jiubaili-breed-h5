@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "德国牧羊犬-品种识别卡.png",
+    "bytes": 177770
+  },
+  {
+    "target": "health.jpg",
+    "source": "德牧-健康观察.png",
+    "bytes": 149960
+  },
+  {
+    "target": "disease.jpg",
+    "source": "德牧-疾病关注.png",
+    "bytes": 167136
+  },
+  {
+    "target": "diet.jpg",
+    "source": "德牧-饮食注意.png",
+    "bytes": 181847
+  },
+  {
+    "target": "care.jpg",
+    "source": "德牧-保健重点.png",
+    "bytes": 167106
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "德牧-情绪关注.png",
+    "bytes": 178334
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "德牧-保险建议.png",
+    "bytes": 162387
+  }
+]

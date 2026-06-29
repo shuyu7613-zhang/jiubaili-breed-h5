@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "美国短毛猫-品种识别卡.png",
+    "bytes": 158882
+  },
+  {
+    "target": "health.jpg",
+    "source": "美短-健康观察.png",
+    "bytes": 150881
+  },
+  {
+    "target": "disease.jpg",
+    "source": "美短-疾病关注.png",
+    "bytes": 199295
+  },
+  {
+    "target": "diet.jpg",
+    "source": "美短-饮食注意.png",
+    "bytes": 162850
+  },
+  {
+    "target": "care.jpg",
+    "source": "美短-保健重点.png",
+    "bytes": 160796
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "美短-情绪关注.png",
+    "bytes": 193389
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "美短-保险建议.png",
+    "bytes": 195771
+  }
+]

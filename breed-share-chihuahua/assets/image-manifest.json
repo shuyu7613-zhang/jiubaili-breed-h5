@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "吉娃娃犬-品种识别卡.png",
+    "bytes": 134328
+  },
+  {
+    "target": "health.jpg",
+    "source": "吉娃娃-健康观察.png",
+    "bytes": 117159
+  },
+  {
+    "target": "disease.jpg",
+    "source": "吉娃娃-疾病关注.png",
+    "bytes": 127941
+  },
+  {
+    "target": "diet.jpg",
+    "source": "吉娃娃-饮食注意.png",
+    "bytes": 140228
+  },
+  {
+    "target": "care.jpg",
+    "source": "吉娃娃-保健重点.png",
+    "bytes": 129237
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "吉娃娃-情绪关注.png",
+    "bytes": 138597
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "吉娃娃-保险建议.png",
+    "bytes": 129117
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "布偶猫-品种识别卡.png",
+    "bytes": 117361
+  },
+  {
+    "target": "health.jpg",
+    "source": "布偶-健康观察.png",
+    "bytes": 112628
+  },
+  {
+    "target": "disease.jpg",
+    "source": "布偶-疾病关注.png",
+    "bytes": 115032
+  },
+  {
+    "target": "diet.jpg",
+    "source": "布偶-饮食注意.png",
+    "bytes": 130999
+  },
+  {
+    "target": "care.jpg",
+    "source": "布偶-保健重点.png",
+    "bytes": 102375
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "布偶-情绪关注.png",
+    "bytes": 110282
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "布偶-保险建议.png",
+    "bytes": 115299
+  }
+]

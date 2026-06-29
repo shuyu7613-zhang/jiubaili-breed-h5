@@ -1,0 +1,37 @@
+[
+  {
+    "target": "identity.jpg",
+    "source": "边境牧羊犬-品种识别卡.png",
+    "bytes": 180862
+  },
+  {
+    "target": "health.jpg",
+    "source": "边牧-健康观察.png",
+    "bytes": 150817
+  },
+  {
+    "target": "disease.jpg",
+    "source": "边牧-疾病关注.png",
+    "bytes": 166436
+  },
+  {
+    "target": "diet.jpg",
+    "source": "边牧-饮食注意.png",
+    "bytes": 163717
+  },
+  {
+    "target": "care.jpg",
+    "source": "边牧-保健重点.png",
+    "bytes": 166712
+  },
+  {
+    "target": "emotion.jpg",
+    "source": "边牧-情绪关注.png",
+    "bytes": 177024
+  },
+  {
+    "target": "insurance.jpg",
+    "source": "边牧-保险建议.png",
+    "bytes": 169995
+  }
+]
